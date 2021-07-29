@@ -1,20 +1,20 @@
-package recipes;
+package recipes.busyness;
 
 public class Id {
-    Integer id;
+    Long id;
 
-    public Id(Integer id) {
+    public Id(Long id) {
         this.id = id;
     }
 
     public Id() {
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }
