@@ -34,7 +34,7 @@ public class RecipeController {
     @PostMapping("/api/recipe/new")
     ResponseEntity<Id> PostRecipe(@RequestBody Recipe recipe) {
         recipe = recipeService.addRecipe(recipe);
-        return recipe == null ? new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE) : new ResponseEntity<>(new Id(recipe.getId()), HttpStatus.OK);
+        return recipe == null ? new ResponseEntity<>(HttpStatus.BAD_REQUEST) : new ResponseEntity<>(new Id(recipe.getId()), HttpStatus.OK);
     }
 
 }

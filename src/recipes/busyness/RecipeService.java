@@ -26,7 +26,11 @@ public class RecipeService{
     }
 
     public Recipe addRecipe(Recipe recipe) {
-        if (recipe.getDirections() == null ||
+        if (recipe.name == null ||
+                recipe.name.isBlank() ||
+                recipe.description == null ||
+                recipe.description.isBlank() ||
+                recipe.getDirections() == null ||
                 recipe.getDirections().length == 0 ||
                 recipe.getIngredients() == null ||
                 recipe.getIngredients().length == 0) {
